@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Foto</title>
+</head>
+<body>
+
+<style>
+	.fuk {
+    outline: none;	
+	width: 225px;
+	height: 45px;
+	position: absolute;
+	}
+	.tuk {
+	outline: none;	
+	width: 225px;
+	height: 45px;
+	}
+	.kuk {
+	width: 600px;
+	height: 500px;
+	}
+</style>
+
+<img id="image" class="kuk" src="https://img11.postila.ru/data/6e/e1/ca/0b/6ee1ca0bb025b1e7261580edabc6ab2cc5ead9a6640e3bcdc00d3d64ed11b49d.jpg" alt="">
+<button class="fuk" onclick="change('next')">-></button>
+<button class="tuk" onclick="change('past')"><-</button>	
+	
+<script>
+	var images = ['https://img11.postila.ru/data/6e/e1/ca/0b/6ee1ca0bb025b1e7261580edabc6ab2cc5ead9a6640e3bcdc00d3d64ed11b49d.jpg','https://images-eds-ssl.xboxlive.com/image?url=8Oaj9Ryq1G1_p3lLnXlsaZgGzAie6Mnu24_PawYuDYIoH77pJ.X5Z.MqQPibUVTcK_gPjzG5w4baW6ZxZj7nSNBN2cXpgreRaLIiMBc_..ohn3067B43HFe1SkdFcXoMuKjp5N40cCO3bCweNLe2Paj3GFt_nXWySB3WbxGZCJVxdCfyIx7xwa7wTtERKsNyZKzXD2xOEPhqeoFZBuOcKO_8ecPInvX_k1OfGRnzTNM-&h=1080&w=1920&format=jpg','https://pay.google.com/about/static/images/social/knowledge_graph_logo.png','https://imgclf.112.ua/original/2015/04/21/157781.jpg?timestamp=1429621673'];
+	var index = 0
+
+
+	function change(argument) {
+		if(argument === "next") {
+			this.index = this.index + 1;
+			var logo = document.getElementById('image');
+			logo.src = images[this.index];
+		} else {
+			if(this.index !== 0){
+				this.index -= 1;
+				document.getElementById('image').src = images[index];
+			} else {
+				this.index = 3;
+				var logo = document.getElementById('image');
+				logo.src = images[this.index];
+			}
+			}
+			
+			}
+
+			
+		
+
+</script>
+
+</body>
+</html>
